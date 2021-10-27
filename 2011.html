@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AEAM</title>
+  <script  type="text/javascript"  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="https://unpkg.com/nanogallery2@3.0.5/dist/css/nanogallery2.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script src="https://unpkg.com/nanogallery2@3.0.5/dist/jquery.nanogallery2.min.js"></script>
+</head>
+<body>
+  <div id="nanogallery">
+    <!-- <a href="../img/1970/9a5bf9ed-5887-4032-851d-1ec25a048c9a.jpg" data-ngthumb="../img/1970/9a5bf9ed-5887-4032-851d-1ec25a048c9a.jpg">title 1</a>
+    <a href="../img/1970/72106f33-1846-4318-9bf1-a07cea85d5d3.jpg" data-ngthumb="../img/1970/72106f33-1846-4318-9bf1-a07cea85d5d3.jpg">title 2</a>
+    <a href="../img/1970/aede5e36-7520-466e-8445-aab1fe383cb9.jpg" data-ngthumb="../img/1970/aede5e36-7520-466e-8445-aab1fe383cb9.jpg">title 3</a>
+    <a href="../img/1970/bffae738-a291-40d5-980f-a6d54ed00baa.jpg" data-ngthumb="../img/1970/bffae738-a291-40d5-980f-a6d54ed00baa.jpg">title 4</a>
+    ... -->
+  </div>
+</body>
+
+<script>
+
+
+        jQuery("#nanogallery").nanogallery2({
+
+          // CONTENT SOURCE
+          // The optional add-on nanoPhotosProvider is used for this example - this is not mandatory and can easily be replaced by a list of medias
+          items: [
+            { src: '../img/2011/HelloIMG1635355922768.jpeg', srct: '../img/2011/HelloIMG1635355922768.jpeg' },
+            { src: '../img/2011/HelloIMG1635355925714.jpeg', srct: '../img/2011/HelloIMG1635355925714.jpeg' },
+            { src: '../img/2011/HelloIMG1635355928622.jpeg', srct: '../img/2011/HelloIMG1635355928622.jpeg' },
+            { src: '../img/2011/HelloIMG1635355939027.jpeg', srct: '../img/2011/HelloIMG1635355939027.jpeg' },
+            { src: '../img/2011/HelloIMG1635355944163.jpeg', srct: '../img/2011/HelloIMG1635355944163.jpeg' },
+            { src: '../img/2011/HelloIMG1635355953390.jpeg', srct: '../img/2011/HelloIMG1635355953390.jpeg' },
+            { src: '../img/2011/HelloIMG1635355957897.jpeg', srct: '../img/2011/HelloIMG1635355957897.jpeg' },
+            { src: '../img/2011/HelloIMG1635355965452.jpeg', srct: '../img/2011/HelloIMG1635355965452.jpeg' },
+            { src: '../img/2011/HelloIMG1635355972166.jpeg', srct: '../img/2011/HelloIMG1635355972166.jpeg' },
+            { src: '../img/2011/HelloIMG1635355983000.jpeg', srct: '../img/2011/HelloIMG1635355983000.jpeg' },
+            { src: '../img/2011/HelloIMG1635355989919.jpeg', srct: '../img/2011/HelloIMG1635355989919.jpeg' },
+            { src: '../img/2011/HelloIMG1635355996976.jpeg', srct: '../img/2011/HelloIMG1635355996976.jpeg' },
+            { src: '../img/2011/HelloIMG1635356005662.jpeg', srct: '../img/2011/HelloIMG1635356005662.jpeg' },
+            { src: '../img/2011/HelloIMG1635356017938.jpeg', srct: '../img/2011/HelloIMG1635356017938.jpeg' },
+            { src: '../img/2011/HelloIMG1635356030072.jpeg', srct: '../img/2011/HelloIMG1635356030072.jpeg' },
+            { src: '../img/2011/HelloIMG1635356049827.jpeg', srct: '../img/2011/HelloIMG1635356049827.jpeg' },
+            { src: '../img/2011/HelloIMG1635356056365.jpeg', srct: '../img/2011/HelloIMG1635356056365.jpeg' }
+          ],
+
+          // GALLERY AND THUMBNAIL LAYOUT
+          galleryDisplayMode: 'moreButton',
+          galleryMaxRows: 3,
+          galleryMaxItems: 15,
+          gallerySorting: 'random',
+         
+          thumbnailHeight: '300 XS200 SM200',       // RESPONSIVE THUMBNAIL HEIGHT: default=300px, XS resolution=200px, SM resolution=200px
+          thumbnailWidth: '300 XS180 SM200',        // RESPONSIVE THUMBNAIL WIDTH:  default=300px, XS resolution=180px, SM resolution=200px
+
+          thumbnailAlignment: 'center',
+          thumbnailBorderHorizontal: 0, thumbnailBorderVertical: 0,
+          thumbnailGutterWidth : '80 XS20 SM20' , thumbnailGutterHeight : '80 XS20 SM20',
+          
+          // THUMBNAIL TOOLS & LABEL
+          // thumbnailLabel: { display: true, position: 'onBottom', align: 'left'},
+          // thumbnailToolbarImage :  { bottomLeft : 'display' },
+          // replace the default DISPLAY tool icon
+          icons: {thumbnailDisplay: '<i class="fa fa-long-arrow-right" aria-hidden="true"></i> display'},
+          
+          // DISPLAY ANIMATION
+          galleryDisplayTransition: 'slideUp',
+          galleryDisplayTransitionDuration: 1000,
+          thumbnailDisplayTransition: 'scaleDown',
+          thumbnailDisplayTransitionDuration: 300,
+          thumbnailDisplayInterval: 50,
+
+
+          // THUMBNAIL'S HOVER ANIMATION
+          thumbnailBuildInit2 : 'tools_font-size_1.5em|title_font-size_1.5em',
+          thumbnailHoverEffect2 : 'image_scale_1.00_1.20_1000|tools_opacity_0_1|tools_translateX_-30px_0px|title_opacity_1_0|title_translateX_0px_-30px',
+          touchAnimation: true,
+          touchAutoOpenDelay: 800,
+
+          // GALLERY THEME
+          galleryTheme : { 
+            thumbnail: { borderRadius: '10px', background: '#fff', titleShadow : 'none', titleColor: '#000', labelBackground: '#ff0' },
+            thumbnailIcon: { color: '#000', shadow: 'none' },
+          },
+          
+          // LIGHTBOX
+          // Hide the bottom toolbar and media title
+          viewerToolbar: { display: false },
+
+          // DEEP LINKING
+          // locationHash: false
+        });
+</script>
+</html>
